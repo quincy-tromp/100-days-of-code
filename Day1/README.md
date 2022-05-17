@@ -1,1 +1,1 @@
-Band Name Generator program
+Day 1: Band Name Generator
