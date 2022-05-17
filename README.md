@@ -1,2 +1,2 @@
-# 100-Days-of-Python
-100 days of Python on Udemy
+# 100 days of Python
+Learning Python, 1 project per day, for 100 days.
