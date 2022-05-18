@@ -5,6 +5,7 @@ play = True
 while play == True:
     choices = ["Rock", "Paper", "Scissor"]
     results = ["Win", "Lose", "Draw"]
+    hand_gestures = [rock, paper, scissor]
 
     rock = ('''
     _______
@@ -30,8 +31,6 @@ while play == True:
       (____)
 ---.__(___)
         ''')
-
-    hand_gestures = [rock, paper, scissor]
 
     your_choice = int(input('\nWhat do you choose?' + ' ' +
     f'Type "0" for Rock, "1" for Paper or "2" for Scissor.\n'))
