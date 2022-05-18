@@ -5,7 +5,7 @@ play = True
 while play == True:
     choices = ["Rock", "Paper", "Scissor"]
     results = ["Win", "Lose", "Draw"]
-    hand_gestures = [rock, paper, scissor]
+    hand_signals = [rock, paper, scissor]
 
     rock = ('''
     _______
@@ -32,21 +32,21 @@ while play == True:
 ---.__(___)
         ''')
 
-    your_choice = int(input('\nWhat do you choose?' + ' ' +
+    user_choice = int(input('\nWhat do you choose?' + ' ' +
     f'Type "0" for Rock, "1" for Paper or "2" for Scissor.\n'))
-    print(f"\nYou chose: {choices[your_choice]}\n" + 
-    hand_gestures[your_choice])
+    print(f"\nYou chose: {choices[user_choice]}\n" + 
+    hand_signals[user_choice])
 
     computer_choice = random.randint(0, len(choices)-1)
     print(f"\nComputer chose: {choices[computer_choice]}\n" + 
-    hand_gestures[computer_choice])
+    hand_signals[computer_choice])
 
-    if your_choice == computer_choice:
+    if user_choice == computer_choice:
         result = "It's a Draw."
     else:
-        if (your_choice == 0 and computer_choice == 2) \
-        or (your_choice == 1 and computer_choice == 0) \
-        or (your_choice == 2 and computer_choice == 1):
+        if (user_choice == 0 and computer_choice == 2) \
+        or (user_choice == 1 and computer_choice == 0) \
+        or (user_choice == 2 and computer_choice == 1):
             result = "You Win!"
         else:
             result = "You Lose."

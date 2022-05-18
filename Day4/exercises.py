@@ -10,7 +10,7 @@ print(coin)
 
 
 #Banker roulette
-names = input("\nGive me everybody's name, seperated by comma. ")
+names = input("Give me everybody's name, seperated by comma. ")
 name_list = names.split(",")
 message = "is going to buy the meal today."
 ##option 1
@@ -22,9 +22,16 @@ print(f"{person_who_will_pay} {message}")
 
 
 #Treasure map
-row1 = ["a1", "a2", "a3"]
-row2 = ["b1", "b2", "b3"]
-row3 = ["c1", "c2", "c3"]
+row1 = ["⬜️", "⬜️", "⬜️"]
+row2 = ["⬜️", "⬜️", "⬜️"]
+row3 = ["⬜️", "⬜️", "⬜️"]
 map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+
+position = input("Where do you want to put the treasure?" + " " + 
+"(For example column 2, row 3 would be entered as: 23) ")
+column = int(position[0])
+row = int(position[1])
+map[row-1][column-1] = "💰"
 
 print(f"{row1}\n{row2}\n{row3}")
