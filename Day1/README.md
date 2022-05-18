@@ -1,1 +1,1 @@
-DAY 1 PROJECT: Band Name Generator
+Day 1: BAND NAME GENERATOR
