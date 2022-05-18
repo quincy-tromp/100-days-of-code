@@ -1,1 +1,1 @@
-Day 4 project: Rock, Paper, Scissor
+Day 4: ROCK, PAPER, SCISSOR
