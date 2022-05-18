@@ -1,4 +1,4 @@
-#Day 3 of 100 - Treasure island
+#Treasure island
 print('''
 *******************************************************************************
           |                   |                  |                     |
@@ -21,8 +21,8 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/[TomekK]
 *******************************************************************************
 ''')
-active = True
-while active:
+play = True
+while play:
 
     greeting = "Welcome to Treasure Island."
     introduction = "Your mission is to find the treasure."
@@ -55,5 +55,5 @@ while active:
 
     play_again = input('Do you want to play again? "Y" or "N"\n').lower()
     if play_again == "n":
-        active = False
+        play = False
         print("Goodbye.")
