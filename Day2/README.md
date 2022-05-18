@@ -1,1 +1,1 @@
-DAY 2 PROJECT: Tip Calculator
+Day 2: TIP CALCULATOR
