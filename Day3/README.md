@@ -1,1 +1,1 @@
-Day 3 project: Treasure island game.
+DAY 3 PROJECT: Treasure Island
