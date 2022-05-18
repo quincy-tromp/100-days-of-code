@@ -43,16 +43,17 @@ while play == True:
     hand_gestures[computer_choice])
 
     if your_choice == computer_choice:
-        print(f"It's a Draw.")
+        result = "It's a Draw."
     else:
-        if (your_choice == "Rock" and computer_choice == "Scissor") \
-        or (your_choice == "Paper" and computer_choice == "Rock") \
-        or (your_choice == "Scissor" and computer_choice == "Paper"):
-            print(f"You Win!")
+        if (your_choice == 0 and computer_choice == 2) \
+        or (your_choice == 1 and computer_choice == 0) \
+        or (your_choice == 2 and computer_choice == 1):
+            result = "You Win!"
         else:
-            print(f"You Lose.")
+            result = "You Lose."
+    print(result)
     
-    play_again = input('\nType "n" if you want to stop the program.\n').lower()
+    play_again = input('\nDo you want to continue? (y/n): \n').lower()
     if play_again == "n":
         play = False
         print("Goodbye.\n")

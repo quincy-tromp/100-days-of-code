@@ -21,4 +21,10 @@ person_who_will_pay = name_list[random.randint(0, len(name_list)-1)].title()
 print(f"{person_who_will_pay} {message}")
 
 
-#
+#Treasure map
+row1 = ["a1", "a2", "a3"]
+row2 = ["b1", "b2", "b3"]
+row3 = ["c1", "c2", "c3"]
+map = [row1, row2, row3]
+
+print(f"{row1}\n{row2}\n{row3}")
