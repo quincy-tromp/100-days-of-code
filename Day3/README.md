@@ -1,1 +1,1 @@
-DAY 3 PROJECT: Treasure Island
+Day 3: TREASURE ISLAND
