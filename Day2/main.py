@@ -1,4 +1,4 @@
-#Tip Calculator
+#TIP CALCULATOR
 greeting = "Welcome to the tip calculator!"
 print(greeting)
 
