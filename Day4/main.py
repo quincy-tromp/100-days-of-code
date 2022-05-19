@@ -1,4 +1,4 @@
-#Rock, paper, scissors
+#ROCK, PAPER, SCISSOR
 import random
 
 play = True
