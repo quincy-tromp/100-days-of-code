@@ -1,4 +1,4 @@
-#Password Generator
+#PASSWORD GENERATOR
 import random
 
 greeting = "\nWelcome to the PyPassword Generator!"
