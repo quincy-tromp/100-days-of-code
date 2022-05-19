@@ -1,1 +1,1 @@
-BAND NAME GENERATOR
+Band Name Generator
