@@ -1,22 +1,22 @@
-#First code: classic "Hello World"
+#Hello World
 print("\n")
 print("Hello World!")
 
-#Code challenge 1 - print function
+#Print function
 print("Day 1 - Python Print Function")
 print("The function is declared like this:")
 print("print('what to print')")
 #End of assignment
 
-#Use escape sequence \n for newline
+#Escape sequence \n for newline
 print("\nHello World!\nHello World!")
 #String concatenation
 print("Hello" + " " + "my friend")
 
-#input function
+#Input function
 print("\nHello " + input("What is your name? "))
 
-#Code challenge 1.3 - input function
+#Input function pt.2
 print("\n")
 print(len(input("What is your name? ")))
 
@@ -25,7 +25,7 @@ name = input("\nWhat is your name?")
 length = len(name)
 print(length)
 
-#Code challenge 1.4 - Switch around the values
+#Switching around the values
 print("\n")
 a = input("a:")
 b = input("b:")
