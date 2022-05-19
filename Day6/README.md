@@ -1,2 +1,2 @@
-Day 6: ESCAPING THE MAZE
-(Project done on reeborg.com)
+ESCAPING THE MAZE
+(project done on reeborg.com)
