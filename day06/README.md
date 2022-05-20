@@ -1,2 +1,3 @@
-Escaping The Maze<br>
-(project done on reeborg.com)
+<h1Day 6 - Python Functions & Karel></h1>
+<h2>Project: Escaping The Maze</h2>
+<img src="escape-the-maze.gif">
