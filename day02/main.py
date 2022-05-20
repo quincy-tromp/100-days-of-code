@@ -1,5 +1,5 @@
 #TIP CALCULATOR
-greeting = "Welcome to the tip calculator!"
+greeting = "\nWelcome to the tip calculator!"
 print(greeting)
 
 bill = float(input("What was the total bill? $"))
