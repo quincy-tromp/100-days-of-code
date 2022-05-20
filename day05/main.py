@@ -30,9 +30,9 @@ password_list = []
 for letter in range(nr_letters + 1):
     password_list.append(random.choice(letters))
 for number in range(nr_numbers + 1):
-    password_list.append(random.choice(letters))
+    password_list.append(random.choice(numbers))
 for symbol in range(nr_symbols + 1):
-    password_list.append(random.choice(letters))
+    password_list.append(random.choice(symbols))
 
 random.shuffle(password_list)
 
@@ -40,4 +40,4 @@ password = ""
 for character in password_list:
     password += character
 
-print(f"Here is your password: {password}\n")
+print(f"Here is your password: {password}")
