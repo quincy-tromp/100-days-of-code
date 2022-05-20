@@ -5,7 +5,6 @@ play = True
 while play == True:
     choices = ["Rock", "Paper", "Scissor"]
     results = ["Win", "Lose", "Draw"]
-    hand_signals = [rock, paper, scissor]
 
     rock = ('''
     _______
@@ -32,6 +31,8 @@ while play == True:
 ---.__(___)
         ''')
 
+    hand_signals = [rock, paper, scissor]
+
     user_choice = int(input('\nWhat do you choose?' + ' ' +
     f'Type "0" for Rock, "1" for Paper or "2" for Scissor.\n'))
     print(f"\nYou chose: {choices[user_choice]}\n" + 
@@ -52,7 +53,7 @@ while play == True:
             result = "You Lose."
     print(result)
     
-    play_again = input('\nDo you want to continue? (y/n): \n').lower()
+    play_again = input('\nDo you want to continue? (y/n): ').lower()
     if play_again == "n":
         play = False
-        print("Goodbye.\n")
+        print("Goodbye.")
