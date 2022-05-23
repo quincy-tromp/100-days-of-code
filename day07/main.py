@@ -1,54 +1,62 @@
 #Hangman
 import random
+import hangman_art as hangman
+import words as w
+from replit import clear
 
-print('''
- _                                             
-| |                                            
-| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
-| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
-| | | | (_| | | | | (_| | | | | | | (_| | | | |
-|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                    __/ |                      
-                   |___/                       
-''')
-gallow = '''
-      _______
-     |/      |
-     |      
-     |      
-     |       
-     |      
-     |
-  ___|___
-'''
-print(gallow)
+print(hangman.logo)
 
-#choose the word
-word_list = ["water", "baboon", "camel", "candy", "milk"]
-chosen_word = random.choice(word_list)
+end_program = False
+while end_program == False:
+  chosen_word = random.choice(w.words)
+  lives = 6
 
-#Generate the blanks
+  display = []
+  for letter in chosen_word:
+    display += "_"
 
+  print(' '.join(display))
+  print(hangman.stages[0])
 
-#Ask player to guess
-guess = input("\nGuess a letter: ").lower()
-
-#Check if guess is in chosen word
-for letter in chosen_word:
-    if letter == guess:
-        print("Right")
+  game_on = True
+  already_guessed = []
+  while game_on:
+    guess = input("\nGuess a letter: ").lower()
+    clear()
+    if guess in already_guessed:
+      print(f"You already guessed {guess}.")
     else:
-        print("Wrong")
+      already_guessed += guess
 
+      word_length = len(chosen_word)
+      for position in range(word_length):
+        letter = chosen_word[position]
+        if guess == letter:
+          display[position] = letter 
+      
+      if guess not in chosen_word:
+        lives -= 1
 
+      print(hangman.logo)
+      print(f"Already guessed: {already_guessed}")
+      print(f"Lives remaining: {lives}")
+      print("\n")
+      print(' '.join(display))
+      print(hangman.stages[6 - lives])
 
-hangman = '''
-      _______
-     |/      |
-     |      (_)
-     |      \|/
-     |       |
-     |      / \\
-     |
-  ___|___
-'''
+    
+      
+      if "_" not in display:
+        game_on = False
+        print("You Win!")
+        print("\n")
+      if lives == 0:
+        game_on = False
+        print("You lose.")
+        print(f"The word was: {chosen_word}")
+        print("\n")
+  
+  play_again = input('Type "quit" to end the game. ')
+  if play_again == "quit":
+    end_program = True
+    print("Goodbye")
