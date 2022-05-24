@@ -1,4 +1,4 @@
-from characters import alphabet
+from alphabet import alphabet
 
 def caesar_cipher(direction, text, shift):
     cipher = ""
@@ -8,8 +8,7 @@ def caesar_cipher(direction, text, shift):
     for char in text:
         if char in alphabet:
             position = alphabet.index(char)
-            new_position = position + shift
-            cipher += alphabet[new_position]
+            cipher += alphabet[position + shift]
         else:
             cipher += char
     print(f"The {direction}d text is: {cipher}")
