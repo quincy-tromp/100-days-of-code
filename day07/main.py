@@ -1,6 +1,6 @@
 #Hangman
 import random
-import hangman_art as hangman
+import ascii_art as hangman
 import words as w
 from replit import clear
 
