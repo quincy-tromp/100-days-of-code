@@ -13,10 +13,8 @@ while bidding:
     bids[name] = amount
     
     more_bidders = input("Are there any other bidders? Type 'yes' or 'no'. ")
+    clear()
     if more_bidders == 'no':
         bidding = False
-        clear()
         print(gavel)
         the_winning_bid(bids=bids)
-    elif more_bidders == 'yes':
-        clear()
