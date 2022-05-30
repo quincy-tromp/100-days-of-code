@@ -12,6 +12,8 @@ while keep_going:
         print(f"You're right! Current score: {score}.")
     person_a = person_b
     person_b = mf.new_person()
+    if person_b == person_a:
+        person_b = mf.new_person()
     print(f"Compare A: {person_a['name']}, a {person_a['description']}, from {person_a['country']}.")
     print(vs)
     print(f"Against B: {person_b['name']}, a {person_b['description']}, from {person_b['country']}.")
