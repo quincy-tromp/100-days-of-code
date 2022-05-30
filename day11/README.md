@@ -1,3 +1,3 @@
 <h1>Day 11 - The Blackjack Capstone Project</h1>
 <h2>Project: Blackjack</h2>
-<img src='blackjack.gif'>
+<img src='blackjack.gif'> 
