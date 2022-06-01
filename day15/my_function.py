@@ -4,10 +4,11 @@ from resources_data import MENU
 
 def take_order():
     ''' 
-    Displays the logo and menu, takes the customer's order, and then returns the customer's order in lowercase.
+    Takes the customer's order, and then returns the customer's order in lowercase.
+    Also displays the logo and menu.
     -------
     Returns
-        customer_order (str): customer's order
+        customer_order (str): customer's order in lowercase
     '''
     print(logo)
     for item in MENU:
@@ -16,7 +17,7 @@ def take_order():
     return choice
 
 
-def report(inventory):
+def report(inventory: list) -> print:
     '''
     Takes the inventory and displays the quantity of each resource, right-aligned.
     ------
@@ -29,13 +30,12 @@ def report(inventory):
     print("Money: ${:<.2f}".format(inventory['money']))
 
 
-def check_resources(customer_order, inventory):
+def check_resources(customer_order: str, inventory: list) -> bool:
     '''
-    Takes the customer's order and the current inventory, checks if there's enough inventory,
-    and returns result, if there are sufficient resources or not.
+    Checks the inventory and returns True or False, there are sufficient resources or not.
     --------
     Args
-        customer_order (str): in lowercase - latte, espresso, or cappuccino 
+        customer_order (str): the customer's order (espresso/latte/cappuccino)
         inventory (list): list with variables that hold the quantity of each resource
     Returns
         sufficient_resources (bool): result of the check; True or False
@@ -54,14 +54,14 @@ def check_resources(customer_order, inventory):
     return sufficient_resources
 
 
-def not_sufficient_resources(customer_order, inventory):
+def not_sufficient_resources(customer_order: str, inventory: list) -> print:
     '''
-    Takes the customer's order and the current inventory, when there's not enough inventory,
-    and displays the resource that there is not enough of.
+    Fucntion to be called when there's not enough inventory; 
+    displays the resource(s) that there is not enough of.
      --------
     Args
-        customer_order (str): in lowercase - latte, espresso, or cappuccino 
-        inventory (list): list with variables that hold the quantity of each resource
+    customer_order (str): the customer's order (espresso/latte/cappuccino)        
+    inventory (list): list with variables that hold the quantity of each resource
     '''
     water_needed = MENU[customer_order]['ingredients'].get('water', 0)
     milk_needed = MENU[customer_order]['ingredients'].get('milk', 0)
@@ -75,16 +75,16 @@ def not_sufficient_resources(customer_order, inventory):
         print("Sorry, there is not enough coffee.")
 
 
-def process_coins(customer_order):
+def process_coins(customer_order: str) -> float:
     '''
-    Takes the customer's order, gathers the cost data, calculates the sum of the money received from the customer, 
-    checks if it's enough. If the money received is not enough, the money is refunded. Else the money is processed 
-    and the change is calculated, if applicable. Returns the money amount processed.
+    Gathers the cost of the customer order, and processes the payment.
+    If the money received is not enough, the money is refunded. Else the payment is processed 
+    and the change is calculated. Returns the payment amount accepted.
     ---------
     Args
-        customer_order (str): the customer's order
+        customer_order (str): the customer's order (espresso/latte/cappuccino)
     Returns
-        payment (float): the total money processed, with a 2 point precision
+        payment (float): the total money accepted, with a 2 point precision
     '''
     print("Please insert coins.")
 
@@ -112,34 +112,33 @@ def process_coins(customer_order):
     return float(payment)
 
 
-def transact(payment):
+def transact(payment: float) -> bool:
     '''
-    Takes the amount of money processed by the machine and returns if the transaction was successful or not.
+    Takes the payment and returns if the transaction was successful or not.
     -----
     Args
         payment (float): the total money processed, with a 2 point precision
     '''
     transaction_successful = False
     if payment > 0:
-        transaction_successful = True
-        
+        transaction_successful = True  
     return transaction_successful
 
 
-def make_order(customer_order):
+def make_order(customer_order: str) -> print:
     '''
-    Displays order made.
+    Displays the order made.
     '''
     print(f"Here is your {customer_order} ☕ Enjoy!")
 
 
-def update_resource_quantities(customer_order, payment, inventory):
+def update_resource_quantities(customer_order: str, payment: float, inventory: list) -> list:
     '''
-    Takes the customer's order, the money amount processed by the machine, and the inventory, 
-    and updates the current inventory for all resources.
+    Takes the customer's order, the payment, and the inventory, 
+    and updates the current inventory of all resources.
     ----
     Args
-        customer_order (str): the customer's order
+        customer_order (str): the customer's order (espresso/latte/cappuccino)
         payment (float): the total money processed, with a 2 point precision
         inventory (list): list with variables that hold the quantity of each resource
     '''
@@ -150,3 +149,4 @@ def update_resource_quantities(customer_order, payment, inventory):
     inventory['milk'] -= milk_needed
     inventory['coffee'] -= coffee_needed
     inventory['money'] += payment
+    return inventory
