@@ -114,7 +114,7 @@ def process_coins(customer_order: str) -> float:
 
 def transact(payment: float) -> bool:
     '''
-    Takes the payment and returns if the transaction was successful or not.
+    Returns if the transaction was successful or not.
     -----
     Args
         payment (float): the total money processed, with a 2 point precision
