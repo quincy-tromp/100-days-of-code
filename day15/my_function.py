@@ -134,8 +134,7 @@ def make_order(customer_order: str) -> print:
 
 def update_resource_quantities(customer_order: str, payment: float, inventory: list) -> list:
     '''
-    Takes the customer's order, the payment, and the inventory, 
-    and updates the current inventory of all resources.
+    Updates the current inventory of all resources, after a drink is made.
     ----
     Args
         customer_order (str): the customer's order (espresso/latte/cappuccino)
