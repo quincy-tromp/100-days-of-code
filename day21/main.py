@@ -20,7 +20,6 @@ screen.onkey(snake.down, "Down")
 screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
 
-sleep(3)
 game_on = True
 while game_on:
     screen.update()
