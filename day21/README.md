@@ -6,4 +6,4 @@
     <li>Detect collision with wall</li>
     <li>Detect collision with tail</li>
 </ul>
-<img src='snake-game.gif'>
+<img src='snake.gif'>
