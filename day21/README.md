@@ -1,4 +1,4 @@
-<h1>Day 21 - Build the Snake Game Part 2: Inheritance & List Slicing</h1>
+<h1>Day 21 — Inheritance, Slicing and Finishing the Snake Game</h1>
 <h2>Project: Snake Game (Part 2)</h2>
 <ul>
     <li>Detect collision with food</li>

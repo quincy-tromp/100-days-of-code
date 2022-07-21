@@ -1,4 +1,4 @@
-<h1>Day 20 - Build the Snake Game Part 1: Animation & Coordinates</h1>
+<h1>Day 20 - Building the Famous Snake Game</h1>
 <h2>Project: Snake Game (Part 1)</h2>
 <ul>
     <li>Create a snake body</li>
